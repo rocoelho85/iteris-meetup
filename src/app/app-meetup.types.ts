@@ -12,8 +12,3 @@ export interface User {
   password: string;
   meetups: number[];
 }
-
-
-export interface ValidateLoginResponse {
-  success: boolean;
-}

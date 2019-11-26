@@ -4,6 +4,7 @@
   <div>Por: <span>{{meetup.talker}}</span></div>
   <div>Quando: <span>{{meetup.date}} {{meetup.hour}}</span></div>
 
-  <button class="btn btn-primary mt-3">Inscrever</button>
+  <button class="btn btn-primary mt-3" *ngIf="!userRegistered" (click)="subscribe();">Inscrever</button> 
+  <span *ngIf="userRegistered">Já inscrito</span>
 
 </div>

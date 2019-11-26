@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MeetupsComponent } from './components/meetups/meetups.component';
+import { AuthorizationGuard } from './guards/authorization.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    redirectTo: 'login',
+    pathMatch: 'full'
   },
   {
     path: 'login',
@@ -17,7 +19,8 @@ const routes: Routes = [
     component: RegisterComponent
   }, {
     path: 'meetups',
-    component: MeetupsComponent
+    component: MeetupsComponent,
+    canActivate: [AuthorizationGuard],
   }
 ];
 

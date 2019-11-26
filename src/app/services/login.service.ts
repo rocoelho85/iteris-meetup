@@ -18,6 +18,6 @@ export class LoginService {
   validateLogin(login: string, password: string): Observable<boolean> {
     return this.httpService.get<User[]>(`http://localhost:3000/users?email=${login}&password=${password}`)
       .pipe(tap(users => this.userService.setUser(users[0])))
-      .pipe(map(() => !!this.userService.getUser()));
+      .pipe(map(() => this.userService.getUser().id !== undefined));
   }
 }

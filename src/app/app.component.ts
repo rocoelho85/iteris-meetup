@@ -26,10 +26,5 @@ export class AppComponent {
           this.router.navigate(['']);
         }
       });
-
-    this.userService
-      .userChange()
-      .subscribe(user => console.log(user));
-
   }
 }

@@ -4,11 +4,11 @@
 
   <div class="form-group">
     <label for="login">Login</label>
-    <input class="form-control" formControlName="login" type="text" name="login" id="login">
+    <input class="form-control" formControlName="login" type="text" name="login" id="login" autocomplete>
   </div>
   <div class="form-group">
-    <label for="senha">Login</label>
-    <input class="form-control" formControlName="password" type="password" name="password" id="password">
+    <label for="senha">Senha</label>
+    <input class="form-control" formControlName="password" type="password" name="password" id="password" autocomplete>
   </div>
 
   <button class="btn btn-sm btn-primary mr-3" [disabled]="!formGroup.valid" type="submit">Login</button>

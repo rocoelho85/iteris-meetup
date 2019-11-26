@@ -1,7 +1,7 @@
 
 <div class="d-flex flex-column w-100 align-items-center">
+  <span>Bem vindo {{user?.name}} | <a href="#" (click)="logout()">logout</a></span> 
   <h3>Próximos Meetups</h3>
-  <a href="#" (click)="logout()">logout</a>
   <app-meetup-item 
     *ngFor="let meetup of (meetups | async)" 
     [meetup]="meetup"></app-meetup-item>

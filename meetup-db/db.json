@@ -38,9 +38,7 @@
       "talker": "Flávio Miashyta",
       "date": "07/11/2020",
       "hour": "20:00",
-      "subscribed": [
-        1
-      ]
+      "subscribed": []
     },
     {
       "id": 5,
@@ -64,9 +62,7 @@
       "talker": "Sandro Caseiro",
       "date": "20/08/2020",
       "hour": "19:00",
-      "subscribed": [
-        1
-      ]
+      "subscribed": []
     },
     {
       "id": 8,

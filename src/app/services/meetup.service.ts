@@ -15,4 +15,8 @@ export class MeetupService {
   listMeetups(): Observable<Meetup[]> {
     return this.httpService.get<Meetup[]>('http://localhost:3000/meetups');
   }
+
+  update(meetup: Meetup): Observable<Meetup> {
+    return this.httpService.put<Meetup>(`http://localhost:3000/meetups/${meetup.id}`, meetup);
+  }
 }

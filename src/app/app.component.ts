@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router, GuardsCheckEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { UserService } from './services/user.service';
+
+import * as ls from 'local-storage';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +14,8 @@ export class AppComponent {
   title = 'iteris-meetup';
 
   constructor(
-    private router: Router
+    private router: Router,
+    private userService: UserService,
   ) {
 
     this.router.events
@@ -22,6 +26,10 @@ export class AppComponent {
           this.router.navigate(['']);
         }
       });
+
+    this.userService
+      .userChange()
+      .subscribe(user => console.log(user));
 
   }
 }

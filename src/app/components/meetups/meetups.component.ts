@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Meetup } from 'src/app/app-meetup.types';
 import { MeetupService } from 'src/app/services/meetup.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-meetups',
@@ -11,7 +12,8 @@ import { MeetupService } from 'src/app/services/meetup.service';
 export class MeetupsComponent implements OnInit {
 
   constructor(
-    private meetupService: MeetupService
+    private meetupService: MeetupService,
+    private userService: UserService,
   ) { }
 
   meetups$: Observable<Meetup[]>;
@@ -22,6 +24,10 @@ export class MeetupsComponent implements OnInit {
 
   ngOnInit() {
     this.meetups$ = this.meetupService.listMeetups();
+  }
+
+  logout() {
+    this.userService.removeUser();
   }
 
 }

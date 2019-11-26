@@ -2,9 +2,10 @@
   <h5 class="">{{meetup.title}}</h5>
 
   <div>Por: <span>{{meetup.talker}}</span></div>
-  <div>Quando: <span>{{meetup.date}} {{meetup.hour}}</span></div>
+  <div>Quando: <span>{{meetup.date}}-{{meetup.hour}}</span></div>
 
-  <button class="btn btn-primary mt-3" *ngIf="!userRegistered" (click)="subscribe();">Inscrever</button> 
+  <button class="btn btn-primary mt-3" *ngIf="!userRegistered" (click)="subscribe()">Inscrever</button>
+  <button class="btn btn-warning mt-3" *ngIf="userRegistered" (click)="unsubscribe()">Não vou mais</button>
+
   <span *ngIf="userRegistered">Já inscrito</span>
-
 </div>

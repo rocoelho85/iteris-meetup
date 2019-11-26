@@ -4,11 +4,11 @@ export interface Meetup {
   talker: string;
   date: string;
   hour: string;
+  subscribed: number[];
 }
 
 export interface User {
   id: number;
   name: string;
-  password: string;
-  meetups: number[];
+  email: string;
 }

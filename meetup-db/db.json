@@ -4,15 +4,13 @@
       "id": 1,
       "name": "Rodrigo Coelho",
       "email": "rodrigo.oliveira@iteris.com.br",
-      "password": "teste123",
-      "meetups": []
+      "password": "teste123"
     },
     {
       "id": 2,
       "name": "José João",
       "email": "jose.joao@iteris.com.br",
-      "password": "teste123",
-      "meetups": []
+      "password": "teste123"
     }
   ],
   "meetups": [
@@ -21,49 +19,58 @@
       "title": "Negociação: Você é um negociador, só não sabia ainda",
       "talker": "Thiago Corda",
       "date": "09/11/2020",
-      "hour": "19:00"
+      "hour": "19:00",
+      "subscribed": []
     },
     {
       "id": 2,
       "title": "UX Designers: o que fazem, onde vivem, como se reproduzem?",
       "talker": "Flávio Miashyta",
       "date": "27/11/2020",
-      "hour": "19:00"
+      "hour": "19:00",
+      "subscribed": []
     },
     {
       "id": 4,
       "title": "Experiência do usuário (UX) na concepção do produto: estudo de caso CIEE/Kairós",
       "talker": "Flávio Miashyta",
       "date": "07/11/2020",
-      "hour": "20:00"
+      "hour": "20:00",
+      "subscribed": []
     },
     {
       "id": 5,
       "title": "Micro Front-end: Estendendo a ideia de microsserviços para o Front-end",
       "talker": "Leonardo Paganelli",
       "date": "10/04/2020",
-      "hour": "19:00"
+      "hour": "19:00",
+      "subscribed": [
+        1
+      ]
     },
     {
       "id": 6,
       "title": "Server Side Rendering com React.Js ",
       "talker": "Raphael Narasak",
       "date": "15/05/2020",
-      "hour": "20:00"
+      "hour": "20:00",
+      "subscribed": []
     },
     {
       "id": 7,
       "title": "GraphQL",
       "talker": "Sandro Caseiro",
       "date": "20/08/2020",
-      "hour": "19:00"
+      "hour": "19:00",
+      "subscribed": []
     },
     {
       "id": 8,
       "title": "Programação assíncrona na prática ",
       "talker": "Ivan Kurt",
       "date": "03/10/2020",
-      "hour": "20:30"
+      "hour": "20:30",
+      "subscribed": []
     }
   ]
 }

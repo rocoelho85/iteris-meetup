@@ -1,1 +1,7 @@
-<p>meetups works!</p>
+
+<div class="d-flex flex-column w-100 align-items-center">
+  <h3>Próximos Meetups</h3>
+  <app-meetup-item 
+    *ngFor="let meetup of (meetups | async)" 
+    [meetup]="meetup"></app-meetup-item>
+</div>

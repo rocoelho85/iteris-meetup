@@ -37,9 +37,7 @@ export class LoginComponent implements OnInit {
 
     this.hideMessageError();
     this.tryAuthenticate()
-      .subscribe(success =>
-        iif(success, this.showMessageError.bind(this), this.navigateToMeetups.bind(this))
-      );
+      .subscribe(success => iif(success, this.navigateToMeetups.bind(this), this.showMessageError.bind(this)));
   }
 
   private tryAuthenticate(): Observable<boolean> {

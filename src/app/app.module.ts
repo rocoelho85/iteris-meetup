@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MeetupsComponent } from './components/meetups/meetups.component';
+import { MeetupItemComponent } from './components/meetups/meetup-item/meetup-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    MeetupsComponent
+    MeetupsComponent,
+    MeetupItemComponent
   ],
   imports: [
     BrowserModule,

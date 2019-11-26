@@ -20,49 +20,49 @@
       "id": 1,
       "title": "Negociação: Você é um negociador, só não sabia ainda",
       "talker": "Thiago Corda",
-      "date": "07/11/2019",
+      "date": "07/11/2020",
       "hour": "19:00"
     },
     {
       "id": 2,
       "title": "UX Designers: o que fazem, onde vivem, como se reproduzem?",
       "talker": "Flávio Miashyta",
-      "date": "07/11/2019",
+      "date": "07/11/2020",
       "hour": "19:00"
     },
     {
       "id": 4,
       "title": "Experiência do usuário (UX) na concepção do produto: estudo de caso CIEE/Kairós",
       "talker": "Flávio Miashyta",
-      "date": "07/11/2019",
+      "date": "07/11/2020",
       "hour": "20:00"
     },
     {
       "id": 5,
       "title": "Micro Front-end: Estendendo a ideia de microsserviços para o Front-end",
       "talker": "Leonardo Paganelli",
-      "date": "10/10/2019",
+      "date": "10/10/2020",
       "hour": "19:00"
     },
     {
       "id": 6,
       "title": "Server Side Rendering com React.Js ",
       "talker": "Raphael Narasak",
-      "date": "10/10/2019",
+      "date": "10/10/2020",
       "hour": "20:00"
     },
     {
       "id": 7,
       "title": "GraphQL",
       "talker": "Sandro Caseiro",
-      "date": "03/10/2019",
+      "date": "03/10/2020",
       "hour": "19:00"
     },
     {
       "id": 8,
       "title": "Programação assíncrona na prática ",
       "talker": "Ivan Kurt",
-      "date": "03/10/2019",
+      "date": "03/10/2020",
       "hour": "20:30"
     }
   ]

@@ -10,6 +10,9 @@ describe('LoginComponent', () => {
   let fixture: ComponentFixture<LoginComponent>;
 
   beforeEach(async(() => {
+
+    const loginService = jasmine.createSpyObj('LoginService', ['validateLogin']);
+
     TestBed.configureTestingModule({
       declarations: [LoginComponent],
       imports: [
@@ -31,4 +34,5 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

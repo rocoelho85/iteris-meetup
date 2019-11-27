@@ -60,7 +60,9 @@
       "talker": "Sandro Caseiro",
       "date": "20/08/2020",
       "hour": "19:00",
-      "subscribed": []
+      "subscribed": [
+        1
+      ]
     },
     {
       "id": 8,

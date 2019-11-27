@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MeetupItemComponent } from './meetup-item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MeetupItemComponent', () => {
   let component: MeetupItemComponent;
@@ -8,7 +9,8 @@ describe('MeetupItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MeetupItemComponent ]
+      declarations: [ MeetupItemComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));

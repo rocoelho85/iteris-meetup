@@ -11,7 +11,6 @@ import * as ls from 'local-storage';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'iteris-meetup';
 
   constructor(
     private router: Router,

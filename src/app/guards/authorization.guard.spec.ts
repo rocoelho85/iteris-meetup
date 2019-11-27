@@ -1,11 +1,13 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 
 import { AuthorizationGuard } from './authorization.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AutorizationGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AuthorizationGuard]
+      providers: [AuthorizationGuard],
+      imports: [HttpClientModule]
     });
   });
 

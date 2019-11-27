@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { iif } from 'src/app/utils';
+import { User } from 'src/app/app-meetup.types';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +23,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private loginService: LoginService,
+    private userService: UserService
   ) {
     this.formGroup = this.fb.group({
       login: ['', [Validators.required]],
@@ -30,23 +33,27 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit() {
-
+    this.loginService
+      .userFound()
+      .subscribe(user => this.userService.setUser(user));
   }
 
   onSubmit() {
 
     this.hideMessageError();
     this.tryAuthenticate()
-      .subscribe(success => iif(success, this.navigateToMeetups.bind(this), this.showMessageError.bind(this)));
+      .subscribe(user =>
+        iif(!!user,
+          this.navigateToMeetups.bind(this),
+          this.showMessageError.bind(this)));
   }
 
-  private tryAuthenticate(): Observable<boolean> {
+  private tryAuthenticate(): Observable<User> {
     const login = this.formGroup.controls.login.value;
     const password = this.formGroup.controls.password.value;
 
     return this.loginService
-      .validateLogin(login, password)
-      .pipe(map((response => response)));
+      .validateLogin(login, password);
   }
 
   private showMessageError() {

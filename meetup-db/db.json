@@ -20,9 +20,7 @@
       "talker": "Thiago Corda",
       "date": "09/11/2020",
       "hour": "19:00",
-      "subscribed": [
-        1
-      ]
+      "subscribed": []
     },
     {
       "id": 2,
@@ -38,9 +36,7 @@
       "talker": "Flávio Miashyta",
       "date": "07/11/2020",
       "hour": "20:00",
-      "subscribed": [
-        1
-      ]
+      "subscribed": []
     },
     {
       "id": 5,

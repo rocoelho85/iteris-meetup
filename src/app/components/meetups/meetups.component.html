@@ -3,6 +3,6 @@
   <span>Bem vindo {{user?.name}} | <a href="#" (click)="logout()">logout</a></span> 
   <h3>Próximos Meetups</h3>
   <app-meetup-item 
-    *ngFor="let meetup of (meetups | async)" 
+    *ngFor="let meetup of meetups" 
     [meetup]="meetup"></app-meetup-item>
 </div>

@@ -13,7 +13,7 @@ export class LocalStorageService {
   }
 
   get<T>(key: string): T {
-    return ls.get<T>(key);
+    return ls.get<T>(key) || undefined;
   }
 
   set<T>(key: string, value: T) {

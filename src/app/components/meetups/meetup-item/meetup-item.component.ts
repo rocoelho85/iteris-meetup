@@ -28,22 +28,15 @@ export class MeetupItemComponent implements OnInit {
       this.meetup.subscribed.some(id => this.user.id === id);
   }
 
-  subscribe() {
-    const meetupUpdate = this.meetup;
-    meetupUpdate.subscribed.push(this.user.id);
+  subscribe() {    
     this.meetupService
-      .update(this.meetup)
+      .subscribeUser(this.meetup, this.user.id)
       .subscribe(meetup => this.meetup = meetup);
   }
 
   unsubscribe() {
-    const meetupUpdate: Meetup = this.meetup;
-    const indexRemove = meetupUpdate.subscribed.indexOf(this.user.id);
-
-    meetupUpdate.subscribed.splice(indexRemove, 1);
-
     this.meetupService
-      .update(this.meetup)
+      .unsubscribeUser(this.meetup, this.user.id)
       .subscribe(meetup => this.meetup = meetup);
   }
 

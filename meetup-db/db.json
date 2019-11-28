@@ -20,7 +20,9 @@
       "talker": "Thiago Corda",
       "date": "09/11/2020",
       "hour": "19:00",
-      "subscribed": []
+      "subscribed": [
+        1
+      ]
     },
     {
       "id": 2,

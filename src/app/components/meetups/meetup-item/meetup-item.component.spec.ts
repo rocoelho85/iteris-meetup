@@ -14,7 +14,7 @@ describe('MeetupItemComponent', () => {
   beforeEach(async(() => {
 
     const userService = jasmine.createSpyObj<UserService>(['getUser', 'removeUser']);
-    const meetupService = jasmine.createSpyObj<MeetupService>(['update']);
+    const meetupService = jasmine.createSpyObj<MeetupService>(['subscribeUser', 'unsubscribeUser']);
 
     TestBed.configureTestingModule({
       declarations: [MeetupItemComponent],
@@ -46,12 +46,12 @@ describe('MeetupItemComponent', () => {
       date: '27/11/2019',
       hour: '19:00',
       talker: 'Rodrigo Coelho',
-      subscribed: []
+      subscribed: [765]
     };
     const userService: jasmine.SpyObj<UserService> = TestBed.get(UserService);
     const meetupService: jasmine.SpyObj<MeetupService> = TestBed.get(MeetupService);
 
-    meetupService.update.and.returnValue(of(expectedMeetup));
+    meetupService.subscribeUser.and.returnValue(of(expectedMeetup));
     userService.getUser.and.returnValue({
       id: 765,
       name: 'Rodrigo',
@@ -66,17 +66,15 @@ describe('MeetupItemComponent', () => {
 
     // then
     fixture.detectChanges();
-    fixture.whenStable().then(() => {
-      const divMeetup =
-        fixture.debugElement.nativeElement.querySelector('.meetup--registered');
+    fixture.whenStable()
+      .then(() => {
+        const divMeetup = fixture.debugElement.nativeElement.querySelector('.meetup--registered');
 
-      expect(divMeetup).toBeTruthy();
+        expect(divMeetup).toBeTruthy();
+        expect(component.userRegistered).toBe(true);
 
-      expect(component.userRegistered).toBe(true);
-
-      done();
-    });
-
+        done();
+      });
   });
 
   it('dado um meetup apresentar o titulo em uma tag h5', () => {

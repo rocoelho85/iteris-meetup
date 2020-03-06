@@ -44,8 +44,9 @@ export class LoginComponent implements OnInit {
     this.tryAuthenticate()
       .subscribe(user =>
         iif(!!user,
-          this.navigateToMeetups.bind(this),
-          this.showMessageError.bind(this)));
+          this.navigateToMeetups,
+          this.showMessageError,
+          this));
   }
 
   private tryAuthenticate(): Observable<User> {

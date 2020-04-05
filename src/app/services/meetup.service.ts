@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
 import { Observable } from 'rxjs';
 import { Meetup } from '../app-meetup.types';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,11 @@ export class MeetupService {
   ) { }
 
   listMeetups(): Observable<Meetup[]> {
-    return this.httpService.get<Meetup[]>('http://localhost:3000/meetups');
+    return this.httpService.get<Meetup[]>(`${environment.apiUrl}/meetups`);
   }
 
   update(meetup: Meetup): Observable<Meetup> {
-    return this.httpService.put<Meetup>(`http://localhost:3000/meetups/${meetup.id}`, meetup);
+    return this.httpService.put<Meetup>(`${environment.apiUrl}/meetups/${meetup.id}`, meetup);
   }
 
   subscribeUser(meetup: Meetup, userId: number): Observable<Meetup> {
